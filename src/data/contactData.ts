@@ -23,7 +23,7 @@ export interface ContactPerson {
 }
 
 export const CONTACT_CONFIG = {
-  collegeName: "International Institute of Information Technology Bangalore",
+  collegeName: "International Institute of Information Technology Bangalore(E-City Campus)",
   shortName: "IIIT Bangalore",
   festivalName: "UMANG 2026",
   address: {
@@ -46,16 +46,16 @@ export const CONTACT_CONFIG = {
   coordinators: [
     {
       id: "coord-1",
-      name: "Arjun Sharma",
-      role: "Overall Festival Convenor",
+      name: "Srikar Pisupati",
+      role: "Sports Comm Member",
       department: "M.Tech CSE · IIIT Bangalore",
       phone: "+91 93539 09085",
       phoneRaw: "+919353909085",
       email: "pisupati.srikar@iiitb.ac.in",
       photoUrl: srikarImg,
-      linkedin: "https://www.linkedin.com/in/",
+      linkedin: "https://www.linkedin.com/in/srikar-pisupati-b1b6a5390/",
       instagram: "https://www.instagram.com/",
-      instagramHandle: "@arjun_sharma"
+      instagramHandle: "@srikar_pisupati"
     },
     {
       id: "coord-2",

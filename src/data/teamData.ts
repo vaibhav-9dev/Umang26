@@ -5,7 +5,7 @@
  * and Instagram profiles of the sports committee members.
  */
 
-import srikarImg from '../assets/images/SrikarImg.jpg';
+import srikarImg from '../assets/images/SrikarImg.jpeg';
 import ananyaImg from '../assets/images/coord_ananya_portrait_1790531197994.jpg';
 import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
 import diyaImg from '../assets/images/coord_diya_portrait_1790531405732.jpg';
