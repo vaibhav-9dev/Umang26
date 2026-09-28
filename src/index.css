@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: 'Cinzel', serif;
+  --font-cinzel-dec: 'Cinzel Decorative', 'Cinzel', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-obsidian: #0B0B0D;
+  --color-stone-dark: #171513;
+  --color-stone-card: #131210;
+  --color-stone-card-hover: #1c1a17;
+  --color-gold: #C9A227;
+  --color-gold-light: #DFBF52;
+  --color-gold-dark: #9F7E1B;
+  --color-bronze: #8C6239;
+  --color-marble: #F1EBDD;
+  --color-stone-gray: #AAA398;
+}
+
+/* Custom Greek & Olympian aesthetic styling */
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-cinzel-dec {
+  font-family: var(--font-cinzel-dec);
+}
+
+/* Greek Meander Key Pattern Border */
+.greek-border-bottom {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #c9a227 0,
+    #c9a227 8px,
+    transparent 8px,
+    transparent 12px,
+    #c9a227 12px,
+    #c9a227 16px,
+    transparent 16px,
+    transparent 24px
+  );
+  background-size: 24px 2px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+/* Olympian Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF0C2 0%, #C9A227 50%, #9F7E1B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-light-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F1EBDD 50%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Marble Glow */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(201, 162, 39, 0.15);
+}
+
+.gold-glow-lg {
+  box-shadow: 0 0 45px rgba(201, 162, 39, 0.25);
+}
+
+/* Olympian Key Border Accent */
+.greek-key-accent {
+  background-image: radial-gradient(circle at 50% 50%, rgba(201, 162, 39, 0.08) 0%, transparent 70%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #25221E;
+  border-radius: 4px;
+  border: 1px solid #36322C;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A227;
+}
+
