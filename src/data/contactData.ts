@@ -4,10 +4,9 @@
  * Edit this file to update college address, contact coordinators, and social media handles.
  */
 
-import arjunImg from '../assets/images/coord_arjun_portrait_1790531178011.jpg';
 import ananyaImg from '../assets/images/coord_ananya_portrait_1790531197994.jpg';
 import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
-import srikarImg from '../assets/SrikarImg.jpeg';
+import srikarImg from '../assets/images/SrikarImg.jpeg';
 
 export interface ContactPerson {
   id: string;
@@ -50,9 +49,9 @@ export const CONTACT_CONFIG = {
       name: "Arjun Sharma",
       role: "Overall Festival Convenor",
       department: "M.Tech CSE · IIIT Bangalore",
-      phone: "+91 98450 18234",
-      phoneRaw: "+919845018234",
-      email: "arjun.sharma@iiitb.ac.in",
+      phone: "+91 93539 09085",
+      phoneRaw: "+919353909085",
+      email: "pisupati.srikar@iiitb.ac.in",
       photoUrl: srikarImg,
       linkedin: "https://www.linkedin.com/in/",
       instagram: "https://www.instagram.com/",

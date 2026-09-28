@@ -5,7 +5,7 @@
  * and Instagram profiles of the sports committee members.
  */
 
-import arjunImg from '../assets/images/coord_arjun_portrait_1790531178011.jpg';
+import srikarImg from '../assets/images/SrikarImg.jpg';
 import ananyaImg from '../assets/images/coord_ananya_portrait_1790531197994.jpg';
 import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
 import diyaImg from '../assets/images/coord_diya_portrait_1790531405732.jpg';
@@ -29,16 +29,16 @@ export interface TeamMember {
 export const SPORTS_COMMITTEE: TeamMember[] = [
   {
     id: "lead-1",
-    name: "Arjun Sharma",
-    role: "Sports Comm Convenor",
+    name: "Srikar Pisupati",
+    role: "Sports Comm Member",
     mythologicalTitle: "Archon of the Games",
     department: "M.Tech CSE · IIIT Bangalore",
-    phone: "+91 98450 18234",
-    phoneRaw: "+919845018234",
-    photoUrl: arjunImg,
-    linkedin: "https://www.linkedin.com/in/",
+    phone: "+91 93539 09085",
+    phoneRaw: "+919353909085",
+    photoUrl: srikarImg,
+    linkedin: "https://www.linkedin.com/in/srikar-pisupati-b1b6a5390/",
     instagram: "https://www.instagram.com/",
-    email: "arjun.sharma@iiitb.ac.in"
+    email: "pisupati.srikar@iiitb.ac.in"
   },
   {
     id: "lead-2",
