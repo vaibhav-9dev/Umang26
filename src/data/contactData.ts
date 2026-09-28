@@ -7,6 +7,7 @@
 import arjunImg from '../assets/images/coord_arjun_portrait_1790531178011.jpg';
 import ananyaImg from '../assets/images/coord_ananya_portrait_1790531197994.jpg';
 import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
+import srikarImg from './SrikarImg.jpeg';
 
 export interface ContactPerson {
   id: string;
@@ -52,7 +53,7 @@ export const CONTACT_CONFIG = {
       phone: "+91 98450 18234",
       phoneRaw: "+919845018234",
       email: "arjun.sharma@iiitb.ac.in",
-      photoUrl: SrikarImg.jpeg,
+      photoUrl: "/SrikarImg.jpeg",
       linkedin: "https://www.linkedin.com/in/",
       instagram: "https://www.instagram.com/",
       instagramHandle: "@arjun_sharma"
