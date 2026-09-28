@@ -7,7 +7,7 @@
 import arjunImg from '../assets/images/coord_arjun_portrait_1790531178011.jpg';
 import ananyaImg from '../assets/images/coord_ananya_portrait_1790531197994.jpg';
 import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
-import srikarImg from './SrikarImg.jpeg';
+import srikarImg from '../assets/SrikarImg.jpeg';
 
 export interface ContactPerson {
   id: string;
