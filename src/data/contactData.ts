@@ -52,7 +52,7 @@ export const CONTACT_CONFIG = {
       phone: "+91 98450 18234",
       phoneRaw: "+919845018234",
       email: "arjun.sharma@iiitb.ac.in",
-      photoUrl: arjunImg,
+      photoUrl: SrikarImg.jpeg,
       linkedin: "https://www.linkedin.com/in/",
       instagram: "https://www.instagram.com/",
       instagramHandle: "@arjun_sharma"
