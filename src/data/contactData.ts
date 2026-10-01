@@ -3,10 +3,10 @@
  * 
  * Edit this file to update college address, contact coordinators, and social media handles.
  */
+import abhiimg from '../assets/images/AbhiRam.jpeg';
+import ansh from '../assets/images/Ansh.png';
+import ajay from '../assets/images/Ajay.jpeg';
 
-import ananyaImg from '../assets/images/coord_ananya_portrait_1790531197994.jpg';
-import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
-import srikarImg from '../assets/images/SrikarImg.jpeg';
 
 export interface ContactPerson {
   id: string;
@@ -126,42 +126,42 @@ export const CONTACT_CONFIG = {
   coordinators: [
     {
       id: "coord-1",
-      name: "Srikar Pisupati",
+      name: "Abhiram M",
       role: "Sports Comm Member",
-      department: "M.Tech CSE · IIIT Bangalore",
-      phone: "+91 93539 09085",
-      phoneRaw: "+919353909085",
-      email: "pisupati.srikar@iiitb.ac.in",
-      photoUrl: srikarImg,
-      linkedin: "https://www.linkedin.com/in/srikar-pisupati-b1b6a5390/",
+      department: "IMT2023108",
+      phone: "+91 98497 54039",
+      phoneRaw: "+919849754039",
+      email: "Mopuri.Abhiram@iiitb.ac.in",
+      photoUrl: abhiimg,
+      linkedin: "https://www.linkedin.com/in/abhiram-mopuri-0659b1385/",
       instagram: "https://www.instagram.com/",
-      instagramHandle: "@srikar_pisupati"
+      instagramHandle: "@"
     },
     {
       id: "coord-2",
-      name: "Ananya Iyer",
-      role: "Registrations & Queries Lead",
-      department: "iM.Tech · IIIT Bangalore",
-      phone: "+91 94480 34129",
-      phoneRaw: "+919448034129",
-      email: "ananya.iyer@iiitb.ac.in",
-      photoUrl: ananyaImg,
-      linkedin: "https://www.linkedin.com/in/",
+      name: "Ansh Rupavatia",
+      role: "Sports Comm Member",
+      department: "IMT2024057",
+      phone: "+91  96244 85222",
+      phoneRaw: "+91 9624485222",
+      email: "RupavatiaAnsh.Rasiklal@iiitb.ac.in",
+      photoUrl: ansh,
+      linkedin: "https://www.linkedin.com/in/ansh-rupavatiya-67529a312/",
       instagram: "https://www.instagram.com/",
-      instagramHandle: "@ananya.iyer"
+      instagramHandle: "@"
     },
     {
       id: "coord-3",
-      name: "Rohan Kulkarni",
-      role: "Hospitality & Team Logistics",
-      department: "iM.Tech · IIIT Bangalore",
-      phone: "+91 87620 59841",
-      phoneRaw: "+918762059841",
-      email: "rohan.kulkarni@iiitb.ac.in",
-      photoUrl: rohanImg,
-      linkedin: "https://www.linkedin.com/in/",
+      name: "Yashraj Mahalle",
+      role: "Sports Comm Member",
+      department: "IC2025032",
+      phone: "+91 93739 77020",
+      phoneRaw: "+91 9373977020",
+      email: "Ajay.Mahalle@iiitb.ac.in",
+      photoUrl: ajay,
+      linkedin: "https://www.linkedin.com/in/yashraj-mahalle-8541b7383/",
       instagram: "https://www.instagram.com/",
-      instagramHandle: "@rohan_kulkarni"
+      instagramHandle: "@"
     }
   ] as ContactPerson[],
   socialMedia: {
