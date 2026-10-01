@@ -39,7 +39,7 @@ export const EventModal: React.FC<EventModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-[#0B0B0D]/85 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-[#040D24]/85 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -47,43 +47,43 @@ export const EventModal: React.FC<EventModalProps> = ({
     >
       {/* Modal Card Container */}
       <div
-        className="relative w-full max-w-2xl bg-[#141210] border border-[#C9A227]/40 shadow-[0_0_50px_rgba(0,0,0,0.9)] p-6 sm:p-8 text-[#F1EBDD] my-8 max-h-[90vh] flex flex-col"
+        className="relative w-full max-w-2xl bg-[#081845] border border-[#F5B81C]/40 shadow-[0_0_60px_rgba(0,0,0,0.9),0_0_40px_rgba(18,51,138,0.4)] p-6 sm:p-8 text-[#F8F9FA] my-8 max-h-[90vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Greek Classical Corner Accents */}
-        <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#C9A227]" />
-        <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#C9A227]" />
-        <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#C9A227]" />
-        <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#C9A227]" />
+        <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#F5B81C]" />
+        <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#F5B81C]" />
+        <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#F5B81C]" />
+        <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#F5B81C]" />
 
         {/* Modal Header */}
-        <div className="flex items-start justify-between border-b border-[#C9A227]/20 pb-5 shrink-0">
+        <div className="flex items-start justify-between border-b border-[#F5B81C]/20 pb-5 shrink-0">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="font-cinzel text-xs font-semibold text-[#8C6239] tracking-[0.2em] uppercase">
+              <span className="font-cinzel text-xs font-semibold text-[#F5B81C] tracking-[0.2em] uppercase">
                 ARENA {sport.orderNumber}
               </span>
-              <span className="text-[#AAA398]/40">·</span>
-              <span className="font-cinzel text-xs text-[#AAA398] tracking-widest uppercase">
+              <span className="text-[#A0ABC4]/40">·</span>
+              <span className="font-cinzel text-xs text-[#A0ABC4] tracking-widest uppercase">
                 {sport.greekDeity}
               </span>
             </div>
 
             <h3
               id="modal-sport-title"
-              className="font-cinzel text-2xl sm:text-3xl font-extrabold uppercase tracking-[0.16em] text-[#F1EBDD]"
+              className="font-cinzel text-2xl sm:text-3xl font-extrabold uppercase tracking-[0.16em] text-[#F8F9FA]"
             >
               {sport.name}
             </h3>
 
-            <p className="font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#DFBF52] mt-0.5">
+            <p className="font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#FFC72C] mt-0.5">
               {sport.subtitle}
             </p>
           </div>
 
           <button
             onClick={onClose}
-            className="p-2 text-[#AAA398] hover:text-[#C9A227] hover:bg-[#1f1d19] border border-white/5 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9A227]"
+            className="p-2 text-[#A0ABC4] hover:text-[#F5B81C] hover:bg-[#0E2866] border border-white/5 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#F5B81C]"
             aria-label="Close dialog"
           >
             <X className="w-5 h-5" />
@@ -92,17 +92,17 @@ export const EventModal: React.FC<EventModalProps> = ({
 
         {/* Modal Body: Scrollable Events Area */}
         <div className="overflow-y-auto py-6 pr-1 space-y-4">
-          <div className="p-3 bg-[#1B1916]/80 border border-[#C9A227]/15 mb-2">
-            <p className="font-sans text-xs text-[#AAA398] italic leading-relaxed">
+          <div className="p-3 bg-[#040D24]/80 border border-[#F5B81C]/20 mb-2">
+            <p className="font-sans text-xs text-[#A0ABC4] italic leading-relaxed">
               &ldquo;{sport.mythosQuote}&rdquo;
             </p>
           </div>
 
           <div className="flex items-center justify-between pt-2 pb-1">
-            <span className="font-cinzel text-xs uppercase tracking-[0.2em] text-[#AAA398]">
+            <span className="font-cinzel text-xs uppercase tracking-[0.2em] text-[#F8F9FA]/80">
               AVAILABLE EVENTS ({sport.events.length})
             </span>
-            <span className="text-[11px] font-sans text-[#AAA398]/70">
+            <span className="text-[11px] font-sans text-[#A0ABC4]">
               Direct Google Form Registration
             </span>
           </div>
@@ -112,34 +112,34 @@ export const EventModal: React.FC<EventModalProps> = ({
             {sport.events.map((event) => (
               <div
                 key={event.id}
-                className="group relative p-4 bg-[#181614] hover:bg-[#1E1C18] border border-white/10 hover:border-[#C9A227]/50 transition-all duration-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                className="group relative p-4 bg-[#040D24] hover:bg-[#0A1D54] border border-white/10 hover:border-[#F5B81C]/50 transition-all duration-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
               >
                 {/* Event Information */}
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="font-cinzel text-sm sm:text-base font-bold tracking-[0.12em] text-[#F1EBDD] group-hover:text-[#DFBF52] transition-colors">
+                    <span className="font-cinzel text-sm sm:text-base font-bold tracking-[0.12em] text-[#F8F9FA] group-hover:text-[#FFC72C] transition-colors">
                       {event.name}
                     </span>
-                    <span className="text-[10px] font-sans px-1.5 py-0.5 uppercase tracking-wider text-[#C9A227] bg-[#C9A227]/10 border border-[#C9A227]/30">
+                    <span className="text-[10px] font-sans px-1.5 py-0.5 uppercase tracking-wider text-[#FFC72C] bg-[#0E2866]/80 border border-[#F5B81C]/30">
                       {event.category}
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-3 text-xs text-[#AAA398]">
+                  <div className="flex items-center gap-3 text-xs text-[#A0ABC4]">
                     <span>Format: {event.format}</span>
                     <span>·</span>
-                    <span className="text-[#AAA398]/70 italic">{event.notes}</span>
+                    <span className="text-[#A0ABC4]/70 italic">{event.notes}</span>
                   </div>
                 </div>
 
                 {/* Direct Register Action Button */}
                 <button
                   onClick={() => handleRegisterClick(event)}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#0B0B0D] bg-gradient-to-r from-[#DFBF52] via-[#C9A227] to-[#DFBF52] hover:brightness-110 active:scale-[0.98] border border-[#FFF0C2]/40 shadow-md transition-all shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A227]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#040D24] bg-gradient-to-r from-[#FFC72C] via-[#F5B81C] to-[#E6AA12] hover:brightness-110 active:scale-[0.98] border border-[#FFF4CE]/50 shadow-md transition-all shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5B81C]"
                   title={`Register for ${event.name}`}
                 >
                   <span>REGISTER</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-[#0B0B0D]" />
+                  <ExternalLink className="w-3.5 h-3.5 text-[#040D24]" />
                 </button>
               </div>
             ))}
@@ -147,15 +147,15 @@ export const EventModal: React.FC<EventModalProps> = ({
         </div>
 
         {/* Modal Footer */}
-        <div className="border-t border-[#C9A227]/20 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] text-[#AAA398] shrink-0">
+        <div className="border-t border-[#F5B81C]/20 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] text-[#A0ABC4] shrink-0">
           <div className="flex items-center gap-2">
-            <LaurelWreath className="w-4 h-4 text-[#C9A227]" />
+            <LaurelWreath className="w-4 h-4 text-[#F5B81C]" />
             <span>Registration takes you directly to the official Google Form</span>
           </div>
 
           <button
             onClick={onClose}
-            className="font-cinzel uppercase tracking-[0.2em] text-[#AAA398] hover:text-[#F1EBDD] text-left sm:text-right"
+            className="font-cinzel uppercase tracking-[0.2em] text-[#A0ABC4] hover:text-[#FFC72C] text-left sm:text-right"
           >
             RETURN TO ARENA
           </button>

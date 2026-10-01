@@ -1,13 +1,34 @@
 import { EventRegistrationKey } from '../config/registrationLinks';
 
-import basketballImg from '../assets/images/sports_basketball_action_1790580528931.jpg';
+import basketballImg from '../assets/images/bbcourt.jpg';
+import bbarena from '../assets/images/bbarena.jpg';
 import footballImg from '../assets/images/sports_football_match_1790580542566.jpg';
+import ffarena from '../assets/images/ftarena.jpg';
+import ffplay from '../assets/images/ftplay.png';
+import ff from '../assets/images/football.png';
+import tt from '../assets/images/TT.png';
+import ttplay from '../assets/images/ttplay.jpg';
+import ttarena from '../assets/images/ttarena.jpg';
 import ttImg from '../assets/images/sports_table_tennis_duel_1790580567841.jpg';
+import btplay from '../assets/images/btplay.jpeg';
+import btarena from '../assets/images/btarena.jpeg';
+import badminton from '../assets/images/badminton.png';
 import badmintonImg from '../assets/images/sports_badminton_smash_1790580555490.jpg';
-import arenaImg from '../assets/images/olympus_athletics_arena_1790530172404.jpg';
-import statueImg from '../assets/images/olympus_greek_statue_1790530183863.jpg';
-import templeSunsetImg from '../assets/images/olympus_temple_sunset_1790530195373.jpg';
-import heroImg from '../assets/images/olympus_hero_cinematic_1790530158793.jpg';
+import volleyball from '../assets/images/ballv.png';
+import vbplay from '../assets/images/vbplay.jpg';
+import vbarena from '../assets/images/vbarena.jpg';
+import tenplay from '../assets/images/tenplay.jpg';
+import tenarena from '../assets/images/tenarena.jpg';
+import tennis from '../assets/images/tennis.png';
+import kplay from '../assets/images/kplay.jpg';
+import kabaddi from '../assets/images/kabaddi.png';
+import thplay from '../assets/images/thplay.jpg';
+import tharena from '../assets/images/tharena.jpg';
+import throwball from '../assets/images/throwball.png';
+import chplay from '../assets/images/chplay.jpg';
+import charena from '../assets/images/charena.jpg';
+import chess from '../assets/images/chess.jpg';
+import bbstatue from '../assets/images/basketball.png';
 
 export interface SportEvent {
   id: string;
@@ -50,7 +71,7 @@ export const SPORTS_DATA: Sport[] = [
     mythosQuote: "Ascend the heights of Olympus. Rise above the rim where mortals become legends.",
     overview: "The hardwood arena beckons the bold. Combining explosive verticality, court vision, and relentless fast breaks, the basketball tournament at Umang 2026 tests the absolute limits of team chemistry and clutch shooting.",
     iconName: "Flame",
-    heroImage: basketballImg,
+    heroImage: bbstatue,
     events: [
       {
         id: "basketball-m-3v3",
@@ -94,13 +115,13 @@ export const SPORTS_DATA: Sport[] = [
       },
       {
         id: "bball-2",
-        imageUrl: arenaImg,
+        imageUrl: bbarena,
         title: "The Collegiate Colosseum",
         caption: "IIIT Bangalore court prepared for high-intensity tournament play."
       },
       {
         id: "bball-3",
-        imageUrl: statueImg,
+        imageUrl: bbstatue,
         title: "Classical Athleticism",
         caption: "The spirit of ancient Greek athletics reborn in collegiate competition."
       }
@@ -115,7 +136,7 @@ export const SPORTS_DATA: Sport[] = [
     mythosQuote: "Forged in endurance. A contest of speed, tactical unity, and unyielding will.",
     overview: "Under the stadium lights of IIIT Bangalore, teams collide in a high-octane 6v6 tournament. Space is tight, pace is relentless, and every through ball carries the weight of victory.",
     iconName: "Shield",
-    heroImage: footballImg,
+    heroImage: ff,
     events: [
       {
         id: "football-m-6v6",
@@ -137,19 +158,19 @@ export const SPORTS_DATA: Sport[] = [
     gallery: [
       {
         id: "fb-1",
-        imageUrl: footballImg,
+        imageUrl: ffplay,
         title: "Battle for Possession",
         caption: "Fierce midfield skirmish under the evening stadium floodlights."
       },
       {
         id: "fb-2",
-        imageUrl: arenaImg,
+        imageUrl: ffarena,
         title: "The Pitch of Honour",
         caption: "Pristine turf ready for the premier inter-college clash."
       },
       {
         id: "fb-3",
-        imageUrl: templeSunsetImg,
+        imageUrl: ff,
         title: "Olympian Twilight",
         caption: "Sunset over the championship arena as teams gear up for kick-off."
       }
@@ -164,7 +185,7 @@ export const SPORTS_DATA: Sport[] = [
     mythosQuote: "Split-second instinct and divine precision. When the orb flies, destiny is decided.",
     overview: "Lightning reflexes, deceitful spin, and unwavering composure. Table tennis at Umang 2026 spans across individual singles, doubles partnerships, mixed duels, and prestigious team championships.",
     iconName: "Zap",
-    heroImage: ttImg,
+    heroImage: tt,
     events: [
       {
         id: "tt-m-team",
@@ -218,19 +239,19 @@ export const SPORTS_DATA: Sport[] = [
     gallery: [
       {
         id: "tt-1",
-        imageUrl: ttImg,
+        imageUrl: ttplay,
         title: "The Service of Apollo",
         caption: "Razor-sharp spin generation during high-stakes championship play."
       },
       {
         id: "tt-2",
-        imageUrl: arenaImg,
+        imageUrl: ttarena,
         title: "The Dual Arenas",
         caption: "Championship tables prepared inside the IIIT Bangalore sports complex."
       },
       {
         id: "tt-3",
-        imageUrl: heroImg,
+        imageUrl: tt,
         title: "Sanctuary of Speed",
         caption: "Atmospheric collegiate stage setting the scene for epic rallies."
       }
@@ -245,7 +266,7 @@ export const SPORTS_DATA: Sport[] = [
     mythosQuote: "Swift as feathered sandals across Mount Olympus. Agility reigns supreme.",
     overview: "Soaring overhead smashes and feather-light net drops. The badminton arena brings explosive footwork and tactical racquet craft together across singles, doubles, and team encounters.",
     iconName: "Feather",
-    heroImage: badmintonImg,
+    heroImage: badminton,
     events: [
       {
         id: "badminton-m-team",
@@ -291,19 +312,19 @@ export const SPORTS_DATA: Sport[] = [
     gallery: [
       {
         id: "bad-1",
-        imageUrl: badmintonImg,
+        imageUrl: btplay,
         title: "Thunderous Jump Smash",
         caption: "Athletes airborne at peak height delivering decisive match points."
       },
       {
         id: "bad-2",
-        imageUrl: arenaImg,
+        imageUrl: btarena,
         title: "The Court of Hermes",
         caption: "Synthetic indoor courts prepared for non-stop racquet battles."
       },
       {
         id: "bad-3",
-        imageUrl: statueImg,
+        imageUrl: badminton,
         title: "Grace in Motion",
         caption: "The classical fusion of physical grace, balance, and unyielding speed."
       }
@@ -318,7 +339,7 @@ export const SPORTS_DATA: Sport[] = [
     mythosQuote: "Commanding the air with thunderous strikes. Defend your citadel.",
     overview: "Above the net, power meets timing. The men's volleyball championship pits powerhouse collegiate teams in thunderous spikes, three-man blocks, and miraculous floor digs.",
     iconName: "Activity",
-    heroImage: arenaImg,
+    heroImage: volleyball,
     events: [
       {
         id: "volleyball-m-team",
@@ -340,19 +361,19 @@ export const SPORTS_DATA: Sport[] = [
     gallery: [
       {
         id: "vb-1",
-        imageUrl: arenaImg,
+        imageUrl: vbplay,
         title: "Aerial Fortress",
         caption: "Spikers clashing with two-man blocks high above the net."
       },
       {
         id: "vb-2",
-        imageUrl: templeSunsetImg,
+        imageUrl: vbarena,
         title: "Sunset Over the Court",
         caption: "Outdoor and indoor court arenas primed for high-stakes competition."
       },
       {
         id: "vb-3",
-        imageUrl: heroImg,
+        imageUrl: volleyball,
         title: "Power and Unity",
         caption: "Team coordination tested in the furnace of championship competition."
       }
@@ -367,7 +388,7 @@ export const SPORTS_DATA: Sport[] = [
     mythosQuote: "An unyielding duel of endurance, court mastery, and relentless focus.",
     overview: "Pounding baselines and crisp volleys. The men's team tennis tournament challenges players across both hard-hitting singles ties and tactical doubles combinations.",
     iconName: "Crosshair",
-    heroImage: statueImg,
+    heroImage: tennis,
     events: [
       {
         id: "tennis-m-team",
@@ -389,19 +410,19 @@ export const SPORTS_DATA: Sport[] = [
     gallery: [
       {
         id: "tn-1",
-        imageUrl: statueImg,
+        imageUrl: tenplay,
         title: "The Classical Serve",
         caption: "Endurance and court mastery embodied in every stroke."
       },
       {
         id: "tn-2",
-        imageUrl: arenaImg,
+        imageUrl: tenarena,
         title: "Hard Courts of Olympus",
         caption: "The premier outdoor hard court arena of IIIT Bangalore."
       },
       {
         id: "tn-3",
-        imageUrl: templeSunsetImg,
+        imageUrl: tennis,
         title: "Evening Finals",
         caption: "Golden light casting long shadows across the baseline during championship ties."
       }
@@ -416,7 +437,7 @@ export const SPORTS_DATA: Sport[] = [
     mythosQuote: "Pure strength, fearless raids, and unbreakable brotherhood in the circle of sand.",
     overview: "Rooted in raw strength, tactical breath control, and ironclad chain tackles. The Kabaddi arena tests who can hold the raid and who can hold the line when the Titans clash.",
     iconName: "Trophy",
-    heroImage: arenaImg,
+    heroImage: kabaddi,
     events: [
       {
         id: "kabaddi-m-team",
@@ -438,19 +459,19 @@ export const SPORTS_DATA: Sport[] = [
     gallery: [
       {
         id: "kb-1",
-        imageUrl: arenaImg,
+        imageUrl: kplay,
         title: "Circle of Titans",
         caption: "The sacred mat where brotherhood and sheer physical will are tested."
       },
       {
         id: "kb-2",
-        imageUrl: statueImg,
+        imageUrl: kplay,
         title: "Heraclean Might",
         caption: "Raw grip, chain synergy, and fearless diving ankle holds."
       },
       {
         id: "kb-3",
-        imageUrl: heroImg,
+        imageUrl: kabaddi,
         title: "Arena of Valour",
         caption: "Championship stage radiating the unyielding energy of Kabaddi."
       }
@@ -465,7 +486,7 @@ export const SPORTS_DATA: Sport[] = [
     mythosQuote: "Poise beneath pressure, explosive agility, and seamless team coordination.",
     overview: "Rapid catches, bullet releases, and spatial dominance. The women's throwball championship highlights precision ball placement and synchronized defensive coverage.",
     iconName: "Target",
-    heroImage: templeSunsetImg,
+    heroImage: throwball,
     events: [
       {
         id: "throwball-w-team",
@@ -487,19 +508,19 @@ export const SPORTS_DATA: Sport[] = [
     gallery: [
       {
         id: "tb-1",
-        imageUrl: templeSunsetImg,
+        imageUrl: thplay,
         title: "Poise Above the Net",
         caption: "Graceful reception and lightning release in championship throwball."
       },
       {
         id: "tb-2",
-        imageUrl: arenaImg,
+        imageUrl: tharena,
         title: "The Court of Hera",
         caption: "Lined court ready for energetic team throwball fixtures."
       },
       {
         id: "tb-3",
-        imageUrl: statueImg,
+        imageUrl: throwball,
         title: "Olympic Symmetry",
         caption: "Athletic poise and team synchrony on the collegiate stage."
       }
@@ -514,7 +535,7 @@ export const SPORTS_DATA: Sport[] = [
     mythosQuote: "The grand arena of intellect. Every move echoes across the immortal pantheon.",
     overview: "Quiet intensity and deep strategic depth. The team chess championship demands visionary opening preparation, tactical calculations, and unshakeable psychological resilience.",
     iconName: "Crown",
-    heroImage: statueImg,
+    heroImage: chess,
     events: [
       {
         id: "chess-team",
@@ -536,19 +557,19 @@ export const SPORTS_DATA: Sport[] = [
     gallery: [
       {
         id: "ch-1",
-        imageUrl: statueImg,
+        imageUrl: chplay,
         title: "The Council of Athena",
         caption: "Intellect and strategy clashing across 64 squares of marble."
       },
       {
         id: "ch-2",
-        imageUrl: heroImg,
+        imageUrl: charena,
         title: "Pantheon of Grandmasters",
         caption: "Silent atmosphere charged with collegiate tactical rivalry."
       },
       {
         id: "ch-3",
-        imageUrl: templeSunsetImg,
+        imageUrl: chess,
         title: "Timeless Contest",
         caption: "Echoes of ancient wisdom channeled into modern collegiate minds."
       }

@@ -4,16 +4,23 @@
   --font-cinzel: 'Cinzel', serif;
   --font-cinzel-dec: 'Cinzel Decorative', 'Cinzel', serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --color-obsidian: #0B0B0D;
-  --color-stone-dark: #171513;
-  --color-stone-card: #131210;
-  --color-stone-card-hover: #1c1a17;
-  --color-gold: #C9A227;
-  --color-gold-light: #DFBF52;
-  --color-gold-dark: #9F7E1B;
-  --color-bronze: #8C6239;
-  --color-marble: #F1EBDD;
-  --color-stone-gray: #AAA398;
+  
+  /* Umang '26 Official Midnight Sapphire & Radiant Greek Gold Palette */
+  --color-obsidian: #040D24;
+  --color-stone-dark: #07153B;
+  --color-stone-card: #0A1E54;
+  --color-stone-card-hover: #0F2A75;
+  --color-olympian-royal: #12338A;
+  --color-olympian-navy: #040E29;
+  --color-olympian-azure: #1F4DC4;
+  
+  --color-gold: #F5B81C;
+  --color-gold-light: #FFC72C;
+  --color-gold-bright: #FFE066;
+  --color-gold-dark: #C99008;
+  --color-bronze: #996E24;
+  --color-marble: #F8F9FA;
+  --color-stone-gray: #A0B2D6;
 }
 
 /* Custom Greek & Olympian aesthetic styling */
@@ -25,16 +32,16 @@
   font-family: var(--font-cinzel-dec);
 }
 
-/* Greek Meander Key Pattern Border */
+/* Greek Meander Key Pattern Border in Logo Gold */
 .greek-border-bottom {
   background-image: repeating-linear-gradient(
     90deg,
-    #c9a227 0,
-    #c9a227 8px,
+    #f5b81c 0,
+    #f5b81c 8px,
     transparent 8px,
     transparent 12px,
-    #c9a227 12px,
-    #c9a227 16px,
+    #f5b81c 12px,
+    #f5b81c 16px,
     transparent 16px,
     transparent 24px
   );
@@ -43,46 +50,50 @@
   background-position: bottom;
 }
 
-/* Olympian Gold Gradient Text */
+/* Olympian Gold Gradient Text matching Umang '26 lettering */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #FFF0C2 0%, #C9A227 50%, #9F7E1B 100%);
+  background: linear-gradient(135deg, #FFFDF0 0%, #FFC72C 35%, #F5B81C 70%, #C99008 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gold-light-gradient {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F1EBDD 50%, #C9A227 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 50%, #F5B81C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Subtle Marble Glow */
+/* Subtle Gold & Sapphire Glow */
 .gold-glow {
-  box-shadow: 0 0 25px rgba(201, 162, 39, 0.15);
+  box-shadow: 0 0 25px rgba(245, 184, 28, 0.28);
 }
 
 .gold-glow-lg {
-  box-shadow: 0 0 45px rgba(201, 162, 39, 0.25);
+  box-shadow: 0 0 45px rgba(245, 184, 28, 0.4), 0 0 75px rgba(18, 51, 138, 0.55);
+}
+
+.sapphire-glow {
+  box-shadow: 0 0 35px rgba(18, 51, 138, 0.55), inset 0 0 20px rgba(245, 184, 28, 0.15);
 }
 
 /* Olympian Key Border Accent */
 .greek-key-accent {
-  background-image: radial-gradient(circle at 50% 50%, rgba(201, 162, 39, 0.08) 0%, transparent 70%);
+  background-image: radial-gradient(circle at 50% 50%, rgba(245, 184, 28, 0.15) 0%, transparent 70%);
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar in Olympian blue & gold */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0B0B0D;
+  background: #040D24;
 }
 ::-webkit-scrollbar-thumb {
-  background: #25221E;
+  background: #0F2A75;
   border-radius: 4px;
-  border: 1px solid #36322C;
+  border: 1px solid #12338A;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9A227;
+  background: #F5B81C;
 }
 

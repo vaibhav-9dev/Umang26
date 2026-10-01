@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Search, ArrowRight, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 import { SPORTS_DATA, Sport, SportEvent } from '../data/sportsData';
 import { LaurelWreath, GreekColumnIcon, OlympianDivider, GreekMeanderStrip } from '../components/GreekDecorations';
+import { UmangLogo } from '../components/UmangLogo';
 import { openRegistrationForm } from '../config/registrationLinks';
 import { useNavigation } from '../context/NavigationContext';
 
@@ -47,21 +48,21 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0B0D] text-[#F1EBDD] pt-24 pb-20">
+    <div className="min-h-screen bg-[#040D24] text-[#F8F9FA] pt-24 pb-20">
       
       {/* Top Banner / Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-        <div className="flex items-center justify-between py-3 border-b border-[#C9A227]/20 text-xs font-cinzel">
-          <div className="flex items-center gap-2 text-[#AAA398]">
-            <button onClick={navigateToHome} className="hover:text-[#C9A227] transition-colors uppercase tracking-wider">
+        <div className="flex items-center justify-between py-3 border-b border-[#F5B81C]/20 text-xs font-cinzel">
+          <div className="flex items-center gap-2 text-[#A0ABC4]">
+            <button onClick={navigateToHome} className="hover:text-[#F5B81C] transition-colors uppercase tracking-wider">
               HOME
             </button>
-            <span className="text-[#8C6239]">/</span>
-            <span className="text-[#DFBF52] font-bold uppercase tracking-wider">
+            <span className="text-[#F5B81C]/50">/</span>
+            <span className="text-[#FFC72C] font-bold uppercase tracking-wider">
               SPORTS ARENA
             </span>
           </div>
-          <span className="text-[11px] text-[#AAA398] tracking-widest uppercase">
+          <span className="text-[11px] text-[#A0ABC4] tracking-widest uppercase">
             9 ARENAS · 18 CONTESTS
           </span>
         </div>
@@ -71,41 +72,45 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center justify-center gap-2 mb-3">
-            <LaurelWreath className="w-5 h-5 text-[#C9A227]" />
-            <span className="font-cinzel text-xs font-bold uppercase tracking-[0.28em] text-[#C9A227]">
-              CHOOSE YOUR ARENA
-            </span>
-            <LaurelWreath className="w-5 h-5 text-[#C9A227] scale-x-[-1]" />
+          <div className="flex justify-center mb-3">
+            <UmangLogo size="sm" withGlow withRing />
           </div>
 
-          <h1 className="font-cinzel text-4xl sm:text-6xl font-black uppercase tracking-[0.14em] text-[#F1EBDD] leading-tight">
+          <div className="inline-flex items-center justify-center gap-2 mb-3">
+            <LaurelWreath className="w-5 h-5 text-[#F5B81C]" />
+            <span className="font-cinzel text-xs font-bold uppercase tracking-[0.28em] text-[#F5B81C]">
+              CHOOSE YOUR ARENA
+            </span>
+            <LaurelWreath className="w-5 h-5 text-[#F5B81C] scale-x-[-1]" />
+          </div>
+
+          <h1 className="font-cinzel text-4xl sm:text-6xl font-black uppercase tracking-[0.14em] text-[#F8F9FA] leading-tight">
             ENTER THE ARENA
           </h1>
 
-          <p className="font-cinzel text-base sm:text-lg font-semibold tracking-[0.22em] text-[#DFBF52] uppercase mt-2">
+          <p className="font-cinzel text-base sm:text-lg font-semibold tracking-[0.22em] text-[#FFC72C] uppercase mt-2">
             CHOOSE YOUR BATTLEFIELD
           </p>
 
-          <p className="font-sans text-sm sm:text-base text-[#AAA398] mt-4 leading-relaxed font-light">
+          <p className="font-sans text-sm sm:text-base text-[#A0ABC4] mt-4 leading-relaxed font-light">
             Select your sport to view full tournament rules, arena galleries, and register directly through official Google Forms.
           </p>
 
           <div className="mt-6 flex items-center justify-center">
-            <div className="w-24 h-[1.5px] bg-[#C9A227]/40" />
+            <div className="w-24 h-[1.5px] bg-[#F5B81C]/40" />
           </div>
         </div>
 
         {/* Filter and Search Bar */}
-        <div className="mb-12 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 p-2 bg-[#141210] border border-[#C9A227]/25 shadow-xl">
+        <div className="mb-12 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 p-2 bg-[#081845]/90 border border-[#F5B81C]/30 shadow-xl">
           {/* Segmented Filter Buttons */}
           <div className="flex items-center gap-1 overflow-x-auto p-1 text-xs">
             <button
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 font-cinzel text-xs tracking-wider uppercase whitespace-nowrap transition-colors ${
                 selectedCategory === 'all'
-                  ? 'bg-[#C9A227] text-[#0B0B0D] font-bold shadow-sm'
-                  : 'text-[#AAA398] hover:text-[#F1EBDD] hover:bg-white/5'
+                  ? 'bg-gradient-to-r from-[#FFC72C] to-[#E6AA12] text-[#040D24] font-bold shadow-sm'
+                  : 'text-[#A0ABC4] hover:text-[#F8F9FA] hover:bg-white/5'
               }`}
             >
               All Arenas (9)
@@ -114,8 +119,8 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
               onClick={() => setSelectedCategory('team')}
               className={`px-4 py-2 font-cinzel text-xs tracking-wider uppercase whitespace-nowrap transition-colors ${
                 selectedCategory === 'team'
-                  ? 'bg-[#C9A227] text-[#0B0B0D] font-bold shadow-sm'
-                  : 'text-[#AAA398] hover:text-[#F1EBDD] hover:bg-white/5'
+                  ? 'bg-gradient-to-r from-[#FFC72C] to-[#E6AA12] text-[#040D24] font-bold shadow-sm'
+                  : 'text-[#A0ABC4] hover:text-[#F8F9FA] hover:bg-white/5'
               }`}
             >
               Team Sports
@@ -124,8 +129,8 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
               onClick={() => setSelectedCategory('individual')}
               className={`px-4 py-2 font-cinzel text-xs tracking-wider uppercase whitespace-nowrap transition-colors ${
                 selectedCategory === 'individual'
-                  ? 'bg-[#C9A227] text-[#0B0B0D] font-bold shadow-sm'
-                  : 'text-[#AAA398] hover:text-[#F1EBDD] hover:bg-white/5'
+                  ? 'bg-gradient-to-r from-[#FFC72C] to-[#E6AA12] text-[#040D24] font-bold shadow-sm'
+                  : 'text-[#A0ABC4] hover:text-[#F8F9FA] hover:bg-white/5'
               }`}
             >
               Singles & Duels
@@ -134,8 +139,8 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
               onClick={() => setSelectedCategory('women')}
               className={`px-4 py-2 font-cinzel text-xs tracking-wider uppercase whitespace-nowrap transition-colors ${
                 selectedCategory === 'women'
-                  ? 'bg-[#C9A227] text-[#0B0B0D] font-bold shadow-sm'
-                  : 'text-[#AAA398] hover:text-[#F1EBDD] hover:bg-white/5'
+                  ? 'bg-gradient-to-r from-[#FFC72C] to-[#E6AA12] text-[#040D24] font-bold shadow-sm'
+                  : 'text-[#A0ABC4] hover:text-[#F8F9FA] hover:bg-white/5'
               }`}
             >
               Women's Divisions
@@ -144,13 +149,13 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
 
           {/* Quick Search Input */}
           <div className="relative min-w-[260px] md:max-w-xs px-2 py-1">
-            <Search className="w-4 h-4 text-[#AAA398] absolute left-5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#A0ABC4] absolute left-5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search sport or event..."
-              className="w-full bg-[#1A1815] border border-white/10 hover:border-[#C9A227]/40 focus:border-[#C9A227] focus:outline-none text-xs text-[#F1EBDD] placeholder-[#AAA398]/60 pl-9 pr-4 py-2 transition-colors font-sans"
+              className="w-full bg-[#040D24] border border-white/10 hover:border-[#F5B81C]/40 focus:border-[#F5B81C] focus:outline-none text-xs text-[#F8F9FA] placeholder-[#A0ABC4]/60 pl-9 pr-4 py-2 transition-colors font-sans"
             />
           </div>
         </div>
@@ -164,49 +169,49 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
               return (
                 <div
                   key={sport.id}
-                  className="group relative bg-[#131210] border border-[#C9A227]/25 hover:border-[#C9A227] transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg hover:shadow-[0_0_35px_rgba(201,162,39,0.2)]"
+                  className="group relative bg-[#081845]/90 border border-[#F5B81C]/25 hover:border-[#F5B81C] transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg hover:shadow-[0_0_35px_rgba(245,184,28,0.25)]"
                 >
                   {/* Classical Corner Notches */}
-                  <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#C9A227]/60 group-hover:border-[#C9A227] transition-colors z-10" />
-                  <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t-2 border-r-2 border-[#C9A227]/60 group-hover:border-[#C9A227] transition-colors z-10" />
-                  <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b-2 border-l-2 border-[#C9A227]/60 group-hover:border-[#C9A227] transition-colors z-10" />
-                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b-2 border-r-2 border-[#C9A227]/60 group-hover:border-[#C9A227] transition-colors z-10" />
+                  <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#F5B81C]/60 group-hover:border-[#F5B81C] transition-colors z-10" />
+                  <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t-2 border-r-2 border-[#F5B81C]/60 group-hover:border-[#F5B81C] transition-colors z-10" />
+                  <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b-2 border-l-2 border-[#F5B81C]/60 group-hover:border-[#F5B81C] transition-colors z-10" />
+                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b-2 border-r-2 border-[#F5B81C]/60 group-hover:border-[#F5B81C] transition-colors z-10" />
 
                   <div className="relative z-10 p-6 sm:p-7 flex-1 flex flex-col">
                     {/* Header */}
                     <div className="flex items-center justify-between border-b border-white/5 pb-3 mb-4">
-                      <span className="font-cinzel text-xs font-bold text-[#8C6239] tracking-[0.2em]">
+                      <span className="font-cinzel text-xs font-bold text-[#F5B81C] tracking-[0.2em]">
                         ARENA {sport.orderNumber}
                       </span>
-                      <span className="font-cinzel text-[10px] uppercase tracking-[0.2em] text-[#C9A227]/80">
+                      <span className="font-cinzel text-[10px] uppercase tracking-[0.2em] text-[#FFC72C]/90">
                         {sport.events.length} {sport.events.length === 1 ? 'EVENT' : 'EVENTS'}
                       </span>
                     </div>
 
                     {/* Name */}
-                    <h3 className="font-cinzel text-2xl sm:text-3xl font-extrabold uppercase tracking-[0.14em] text-[#F1EBDD] group-hover:text-gold-light-gradient transition-all">
+                    <h3 className="font-cinzel text-2xl sm:text-3xl font-extrabold uppercase tracking-[0.14em] text-[#F8F9FA] group-hover:text-[#FFC72C] transition-all">
                       {sport.name}
                     </h3>
 
                     {/* Subtitle */}
-                    <p className="font-cinzel text-xs font-bold uppercase tracking-[0.22em] text-[#C9A227] mt-1 mb-3">
+                    <p className="font-cinzel text-xs font-bold uppercase tracking-[0.22em] text-[#F5B81C] mt-1 mb-3">
                       {sport.subtitle}
                     </p>
 
                     {/* Mythos Quote */}
-                    <p className="font-sans text-xs text-[#AAA398] italic leading-relaxed mb-6 font-light">
+                    <p className="font-sans text-xs text-[#A0ABC4] italic leading-relaxed mb-6 font-light">
                       &ldquo;{sport.mythosQuote}&rdquo;
                     </p>
 
                     {/* Events List / Quick Drawer */}
                     <div className="mt-auto pt-4 border-t border-white/5">
-                      <div className="flex items-center justify-between text-xs text-[#AAA398] mb-2.5">
+                      <div className="flex items-center justify-between text-xs text-[#A0ABC4] mb-2.5">
                         <span className="font-cinzel text-[10px] uppercase tracking-[0.2em]">
                           EVENTS LIST
                         </span>
                         <button
                           onClick={() => setExpandedSportId(isExpanded ? null : sport.id)}
-                          className="inline-flex items-center gap-1 text-[11px] text-[#C9A227] hover:underline cursor-pointer"
+                          className="inline-flex items-center gap-1 text-[11px] text-[#F5B81C] hover:underline cursor-pointer"
                         >
                           <span>{isExpanded ? 'Hide' : 'Quick register'}</span>
                           {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
@@ -219,20 +224,20 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
                           {sport.events.map((event) => (
                             <div
                               key={event.id}
-                              className="p-2.5 bg-[#1B1916] border border-[#C9A227]/20 flex items-center justify-between gap-2"
+                              className="p-2.5 bg-[#040D24] border border-[#F5B81C]/20 flex items-center justify-between gap-2"
                             >
                               <div className="truncate pr-2">
-                                <span className="font-cinzel text-xs text-[#F1EBDD] font-medium block truncate">
+                                <span className="font-cinzel text-xs text-[#F8F9FA] font-medium block truncate">
                                   {event.name}
                                 </span>
-                                <span className="text-[10px] text-[#AAA398]">
+                                <span className="text-[10px] text-[#A0ABC4]">
                                   {event.format}
                                 </span>
                               </div>
 
                               <button
                                 onClick={(e) => handleRegister(e, sport.name, event)}
-                                className="px-3 py-1 bg-[#C9A227] hover:bg-[#DFBF52] text-[#0B0B0D] font-cinzel text-[10px] font-bold uppercase tracking-wider shrink-0 transition-colors flex items-center gap-1"
+                                className="px-3 py-1 bg-gradient-to-r from-[#FFC72C] to-[#E6AA12] hover:brightness-110 text-[#040D24] font-cinzel text-[10px] font-bold uppercase tracking-wider shrink-0 transition-colors flex items-center gap-1"
                                 title={`Register for ${event.name}`}
                               >
                                 <span>REGISTER</span>
@@ -245,11 +250,11 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
 
                       {/* Collapsed event summary */}
                       {!isExpanded && (
-                        <div className="text-xs text-[#AAA398]/70 flex flex-wrap gap-x-2 gap-y-1">
+                        <div className="text-xs text-[#A0ABC4]/80 flex flex-wrap gap-x-2 gap-y-1">
                           {sport.events.map((ev, i) => (
                             <span key={ev.id}>
                               {ev.name}
-                              {i < sport.events.length - 1 && <span className="text-[#AAA398]/30 ml-2">/</span>}
+                              {i < sport.events.length - 1 && <span className="text-[#A0ABC4]/40 ml-2">/</span>}
                             </span>
                           ))}
                         </div>
@@ -257,13 +262,13 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
                     </div>
                   </div>
 
-                  <GreekMeanderStrip className="w-full h-1.5 text-[#C9A227]" opacity="opacity-30" />
+                  <GreekMeanderStrip className="w-full h-1.5 text-[#F5B81C]" opacity="opacity-30" />
 
                   {/* Card Primary Action: VIEW EVENTS (Navigates to dedicated page) */}
                   <div className="relative z-10 p-5 pt-0 bg-transparent">
                     <button
                       onClick={() => navigateToSportDetail(sport.id)}
-                      className="w-full py-3 px-4 font-cinzel text-xs font-bold uppercase tracking-[0.24em] text-[#F1EBDD] bg-[#181614] hover:bg-[#C9A227] hover:text-[#0B0B0D] border border-[#C9A227]/40 hover:border-[#C9A227] transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-[0_0_20px_rgba(201,162,39,0.25)]"
+                      className="w-full py-3 px-4 font-cinzel text-xs font-bold uppercase tracking-[0.24em] text-[#F8F9FA] bg-[#040D24] hover:bg-[#F5B81C] hover:text-[#040D24] border border-[#F5B81C]/40 hover:border-[#F5B81C] transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-[0_0_20px_rgba(245,184,28,0.3)] font-semibold"
                     >
                       <span>VIEW EVENTS, RULES & GALLERY</span>
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -274,11 +279,11 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
             })}
           </div>
         ) : (
-          <div className="py-16 text-center border border-white/5 bg-[#141210] p-8">
-            <p className="font-cinzel text-lg text-[#F1EBDD] uppercase tracking-widest mb-2">
+          <div className="py-16 text-center border border-white/5 bg-[#081845]/80 p-8">
+            <p className="font-cinzel text-lg text-[#F8F9FA] uppercase tracking-widest mb-2">
               No arena matches your search
             </p>
-            <p className="text-xs text-[#AAA398] font-sans mb-4">
+            <p className="text-xs text-[#A0ABC4] font-sans mb-4">
               Clear your search term or select &ldquo;All Arenas&rdquo; to view all 9 sports.
             </p>
             <button
@@ -286,7 +291,7 @@ export const SportsPage: React.FC<SportsPageProps> = ({ onEventRegistered }) => 
                 setSearchQuery('');
                 setSelectedCategory('all');
               }}
-              className="px-5 py-2 font-cinzel text-xs font-bold text-[#0B0B0D] bg-[#C9A227] uppercase tracking-wider"
+              className="px-5 py-2 font-cinzel text-xs font-bold text-[#040D24] bg-[#F5B81C] uppercase tracking-wider"
             >
               RESET FILTERS
             </button>

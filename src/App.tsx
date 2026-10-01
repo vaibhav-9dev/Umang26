@@ -49,7 +49,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0B0D] text-[#F1EBDD] flex flex-col font-sans selection:bg-[#C9A227] selection:text-[#0B0B0D]">
+    <div className="min-h-screen bg-[#040D24] text-[#F8F9FA] flex flex-col font-sans selection:bg-[#F5B81C] selection:text-[#040D24]">
       {/* Sticky Responsive Navigation Bar on Every Page */}
       <Navbar />
 
