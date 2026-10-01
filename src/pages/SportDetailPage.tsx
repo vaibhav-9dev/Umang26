@@ -9,9 +9,10 @@ import {
   AlertCircle, 
   ChevronRight,
   Maximize2,
-  X
+  X,
+  Check
 } from 'lucide-react';
-import { SPORTS_DATA, Sport, SportEvent, SportGalleryItem } from '../data/sportsData';
+import { SPORTS_DATA, Sport, SportEvent, SportGalleryItem, GENERAL_TOURNAMENT_RULES } from '../data/sportsData';
 import { openRegistrationForm } from '../config/registrationLinks';
 import { LaurelWreath, GreekColumnIcon, OlympianDivider, GreekMeanderStrip } from '../components/GreekDecorations';
 import { UmangLogo } from '../components/UmangLogo';
@@ -263,22 +264,57 @@ export const SportDetailPage: React.FC<SportDetailPageProps> = ({
             All participating athletes and college contingents must uphold strict adherence to the official rulebook and collegiate conduct guidelines.
           </p>
 
-          {/* Rules List */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-8">
-            {sport.rules.map((rule, idx) => (
-              <div
-                key={idx}
-                className="p-4 bg-[#040D24] border border-[#F5B81C]/20 flex items-start gap-3 text-xs leading-relaxed"
-              >
-                <div className="w-6 h-6 rounded-none border border-[#F5B81C]/60 bg-[#081845] flex items-center justify-center font-cinzel text-[11px] font-bold text-[#FFC72C] shrink-0 mt-0.5">
-                  0{idx + 1}
+          {/* Rules List - General Tournament Rules First */}
+          <div className="mb-10">
+            <div className="flex items-center gap-2 mb-4 pb-2 border-b border-[#F5B81C]/25">
+              <ShieldCheck className="w-4 h-4 text-[#F5B81C]" />
+              <h3 className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#FFC72C]">
+                GENERAL TOURNAMENT RULES (APPLIES TO EVERY SPORT)
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+              {(sport.generalRules || GENERAL_TOURNAMENT_RULES).map((rule, idx) => (
+                <div
+                  key={`general-${idx}`}
+                  className="p-3.5 bg-[#040D24] border border-[#F5B81C]/25 hover:border-[#F5B81C]/50 transition-colors flex items-start gap-3 text-xs leading-relaxed"
+                >
+                  <div className="w-5 h-5 rounded-none border border-[#F5B81C]/70 bg-[#081845] flex items-center justify-center text-[#FFC72C] shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <p className="text-[#F8F9FA]/90 font-sans">
+                    {rule}
+                  </p>
                 </div>
-                <p className="text-[#F8F9FA]/90 font-sans">
-                  {rule}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
+          {/* Sport-Specific Regulations */}
+          {sport.sportSpecificRules && sport.sportSpecificRules.length > 0 && (
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-4 pb-2 border-b border-[#F5B81C]/25">
+                <Trophy className="w-4 h-4 text-[#F5B81C]" />
+                <h3 className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#FFC72C]">
+                  {sport.name.toUpperCase()} SPECIFIC REGULATIONS
+                </h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                {sport.sportSpecificRules.map((rule, idx) => (
+                  <div
+                    key={`specific-${idx}`}
+                    className="p-3.5 bg-[#040D24] border border-[#F5B81C]/20 flex items-start gap-3 text-xs leading-relaxed"
+                  >
+                    <div className="w-5 h-5 rounded-none border border-[#F5B81C]/60 bg-[#081845] flex items-center justify-center font-cinzel text-[10px] font-bold text-[#FFC72C] shrink-0 mt-0.5">
+                      0{idx + 1}
+                    </div>
+                    <p className="text-[#F8F9FA]/90 font-sans">
+                      {rule}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Notice Box */}
           <div className="p-4 bg-[#040D24] border border-[#F5B81C]/30 flex items-start gap-3">

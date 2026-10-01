@@ -11,7 +11,6 @@ import srikarImg from '../assets/images/SrikarImg.jpeg';
 import abhiImg from '../assets/images/AbhiRam.jpeg';
 import ajayImg from '../assets/images/Ajay.jpeg';
 import anshImg from '../assets/images/Ansh.png';
-import ananyaImg from '../assets/images/coord_ananya_portrait_1790531197994.jpg';
 import rohanImg from '../assets/images/coord_rohan_portrait_1790531212102.jpg';
 import diyaImg from '../assets/images/coord_diya_portrait_1790531405732.jpg';
 import arjunImg from '../assets/images/coord_arjun_portrait_1790531178011.jpg';

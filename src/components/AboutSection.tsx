@@ -1,6 +1,8 @@
 import React from 'react';
 import { LaurelWreath, GreekColumnIcon, OlympianDivider } from './GreekDecorations';
 import { UmangLogo } from './UmangLogo';
+import { GENERAL_TOURNAMENT_RULES } from '../data/rulesData';
+import { ShieldCheck, Check } from 'lucide-react';
 import sportsArenaImg from '../assets/images/olympus_athletics_arena_1790530172404.jpg';
 
 export const AboutSection: React.FC = () => {
@@ -86,6 +88,46 @@ export const AboutSection: React.FC = () => {
             </p>
           </div>
 
+        </div>
+
+        {/* Official Tournament Rules & Code of Conduct */}
+        <div className="mt-16 text-left p-6 sm:p-10 bg-[#081845]/90 border border-[#F5B81C]/35 shadow-2xl relative">
+          {/* Classical Corner Accents */}
+          <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#F5B81C]" />
+          <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#F5B81C]" />
+          <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#F5B81C]" />
+          <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#F5B81C]" />
+
+          <div className="flex items-center gap-2 mb-2">
+            <ShieldCheck className="w-4 h-4 text-[#F5B81C]" />
+            <span className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#F5B81C]">
+              OFFICIAL CODE & REGULATIONS
+            </span>
+          </div>
+
+          <h3 className="font-cinzel text-xl sm:text-3xl font-extrabold uppercase tracking-[0.14em] text-[#F8F9FA] mb-3">
+            TOURNAMENT RULES FOR EVERY SPORT
+          </h3>
+
+          <p className="font-sans text-xs sm:text-sm text-[#A0ABC4] mb-6 max-w-3xl leading-relaxed">
+            All participating institutions, contingent captains, and athletes across all sports must adhere strictly to these universal tournament regulations:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+            {GENERAL_TOURNAMENT_RULES.map((rule, idx) => (
+              <div
+                key={idx}
+                className="p-3.5 bg-[#040D24] border border-[#F5B81C]/25 flex items-start gap-3 text-xs leading-relaxed"
+              >
+                <div className="w-5 h-5 rounded-none border border-[#F5B81C]/70 bg-[#081845] flex items-center justify-center text-[#FFC72C] shrink-0 mt-0.5">
+                  <Check className="w-3.5 h-3.5" />
+                </div>
+                <p className="text-[#F8F9FA]/90 font-sans">
+                  {rule}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

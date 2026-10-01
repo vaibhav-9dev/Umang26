@@ -29,6 +29,9 @@ import chplay from '../assets/images/chplay.jpg';
 import charena from '../assets/images/charena.jpg';
 import chess from '../assets/images/chess.jpg';
 import bbstatue from '../assets/images/basketball.png';
+import { GENERAL_TOURNAMENT_RULES } from './rulesData';
+
+export { GENERAL_TOURNAMENT_RULES } from './rulesData';
 
 export interface SportEvent {
   id: string;
@@ -58,6 +61,8 @@ export interface Sport {
   iconName: string;
   heroImage: string;
   rules: string[];
+  sportSpecificRules?: string[];
+  generalRules?: string[];
   gallery: SportGalleryItem[];
 }
 
@@ -98,13 +103,23 @@ export const SPORTS_DATA: Sport[] = [
         notes: "Details will be announced soon."
       }
     ],
-    rules: [
+    sportSpecificRules: [
       "All standard FIBA rules govern the matches unless specifically modified by the tournament committee.",
       "For 5v5: 4 quarters of regulation playing time; running clock until the final 2 minutes of the fourth quarter.",
       "For 3v3: Half court format with a 12-second shot clock; first team to 21 points or highest score after 10 minutes wins.",
       "Teams must report in matching collegiate jerseys with visible numbers at least 20 minutes prior to scheduled tip-off.",
       "Strict zero-tolerance policy for unsportsmanlike fouls, technical fouls, or referee dissent.",
       "Fixtures, bracket draws, and court timings will be announced soon by the Sports Committee."
+    ],
+    generalRules: GENERAL_TOURNAMENT_RULES,
+    rules: [
+      "All standard FIBA rules govern the matches unless specifically modified by the tournament committee.",
+      "For 5v5: 4 quarters of regulation playing time; running clock until the final 2 minutes of the fourth quarter.",
+      "For 3v3: Half court format with a 12-second shot clock; first team to 21 points or highest score after 10 minutes wins.",
+      "Teams must report in matching collegiate jerseys with visible numbers at least 20 minutes prior to scheduled tip-off.",
+      "Strict zero-tolerance policy for unsportsmanlike fouls, technical fouls, or referee dissent.",
+      "Fixtures, bracket draws, and court timings will be announced soon by the Sports Committee.",
+      ...GENERAL_TOURNAMENT_RULES
     ],
     gallery: [
       {
@@ -147,13 +162,23 @@ export const SPORTS_DATA: Sport[] = [
         notes: "Details will be announced soon."
       }
     ],
-    rules: [
+    sportSpecificRules: [
       "Tournament follows standard 6v6 short-pitch football regulations with rolling substitutions.",
       "Matches consist of two 20-minute halves separated by a 5-minute halftime interval.",
       "No offside rule in effect; goalkeepers may not throw or kick the ball directly into the opponent's penalty box on the full.",
       "Players must wear proper football boots/studs and shin guards at all times during match play.",
       "Yellow cards result in a 2-minute sin-bin penalty; red cards incur immediate ejection and a one-match suspension.",
       "Detailed fixture brackets and kickoff schedules will be announced soon."
+    ],
+    generalRules: GENERAL_TOURNAMENT_RULES,
+    rules: [
+      "Tournament follows standard 6v6 short-pitch football regulations with rolling substitutions.",
+      "Matches consist of two 20-minute halves separated by a 5-minute halftime interval.",
+      "No offside rule in effect; goalkeepers may not throw or kick the ball directly into the opponent's penalty box on the full.",
+      "Players must wear proper football boots/studs and shin guards at all times during match play.",
+      "Yellow cards result in a 2-minute sin-bin penalty; red cards incur immediate ejection and a one-match suspension.",
+      "Detailed fixture brackets and kickoff schedules will be announced soon.",
+      ...GENERAL_TOURNAMENT_RULES
     ],
     gallery: [
       {
@@ -228,13 +253,23 @@ export const SPORTS_DATA: Sport[] = [
         notes: "Details will be announced soon."
       }
     ],
-    rules: [
+    sportSpecificRules: [
       "All matches adhere strictly to International Table Tennis Federation (ITTF) guidelines.",
       "Singles and doubles preliminary rounds are best-of-5 sets; semi-finals and finals are best-of-7 sets (11 points per set).",
       "Two-point advantage required to conclude deuce situations at 10-10.",
       "Only ITTF-approved rubber paddles and non-marking indoor sports shoes are permitted on the court matting.",
       "Team championship format entails best-of-5 matches (3 Singles and 2 Doubles ties).",
       "Table assignments and draw sheets will be announced soon."
+    ],
+    generalRules: GENERAL_TOURNAMENT_RULES,
+    rules: [
+      "All matches adhere strictly to International Table Tennis Federation (ITTF) guidelines.",
+      "Singles and doubles preliminary rounds are best-of-5 sets; semi-finals and finals are best-of-7 sets (11 points per set).",
+      "Two-point advantage required to conclude deuce situations at 10-10.",
+      "Only ITTF-approved rubber paddles and non-marking indoor sports shoes are permitted on the court matting.",
+      "Team championship format entails best-of-5 matches (3 Singles and 2 Doubles ties).",
+      "Table assignments and draw sheets will be announced soon.",
+      ...GENERAL_TOURNAMENT_RULES
     ],
     gallery: [
       {
@@ -301,13 +336,23 @@ export const SPORTS_DATA: Sport[] = [
         notes: "Details will be announced soon."
       }
     ],
-    rules: [
+    sportSpecificRules: [
       "Matches played according to standard Badminton World Federation (BWF) rally point scoring system.",
       "Best of 3 games to 21 points; side winning a rally adds a point to its score.",
       "If score reaches 20-all, the side which gains a 2-point lead first wins; at 29-all, the side scoring the 30th point wins.",
       "Non-marking rubber shoes are strictly mandatory on the synthetic courts.",
       "Tournament grade feathered shuttlecocks will be provided for all official ties.",
       "Detailed court schedules and tie timings will be announced soon."
+    ],
+    generalRules: GENERAL_TOURNAMENT_RULES,
+    rules: [
+      "Matches played according to standard Badminton World Federation (BWF) rally point scoring system.",
+      "Best of 3 games to 21 points; side winning a rally adds a point to its score.",
+      "If score reaches 20-all, the side which gains a 2-point lead first wins; at 29-all, the side scoring the 30th point wins.",
+      "Non-marking rubber shoes are strictly mandatory on the synthetic courts.",
+      "Tournament grade feathered shuttlecocks will be provided for all official ties.",
+      "Detailed court schedules and tie timings will be announced soon.",
+      ...GENERAL_TOURNAMENT_RULES
     ],
     gallery: [
       {
@@ -350,13 +395,23 @@ export const SPORTS_DATA: Sport[] = [
         notes: "Details will be announced soon."
       }
     ],
-    rules: [
+    sportSpecificRules: [
       "FIVB international guidelines apply throughout the tournament bracket.",
       "Knockout ties played as best of 3 sets (first two sets to 25 points, decider set to 15 points with a 2-point lead).",
       "Finals played as best of 5 sets.",
       "Rotation must be maintained; libero rules apply according to standard collegiate conventions.",
       "Maximum of 12 registered squad players per team on the official match sheet.",
       "Draws and court assignments will be announced soon."
+    ],
+    generalRules: GENERAL_TOURNAMENT_RULES,
+    rules: [
+      "FIVB international guidelines apply throughout the tournament bracket.",
+      "Knockout ties played as best of 3 sets (first two sets to 25 points, decider set to 15 points with a 2-point lead).",
+      "Finals played as best of 5 sets.",
+      "Rotation must be maintained; libero rules apply according to standard collegiate conventions.",
+      "Maximum of 12 registered squad players per team on the official match sheet.",
+      "Draws and court assignments will be announced soon.",
+      ...GENERAL_TOURNAMENT_RULES
     ],
     gallery: [
       {
@@ -399,13 +454,23 @@ export const SPORTS_DATA: Sport[] = [
         notes: "Details will be announced soon."
       }
     ],
-    rules: [
+    sportSpecificRules: [
       "ITF tennis rules govern all team match encounters.",
       "Each team tie comprises 2 Singles matches and 1 deciding Doubles match (if required).",
       "Matches played as advantage sets with a 7-point tiebreak at 6-6.",
       "Deuce scoring with standard advantage rule; tournament committee reserves right to use sudden-death No-Ad scoring in qualifiers.",
       "Regulation ITF-approved tennis balls will be supplied for each match.",
       "Match court schedules and seeded brackets will be announced soon."
+    ],
+    generalRules: GENERAL_TOURNAMENT_RULES,
+    rules: [
+      "ITF tennis rules govern all team match encounters.",
+      "Each team tie comprises 2 Singles matches and 1 deciding Doubles match (if required).",
+      "Matches played as advantage sets with a 7-point tiebreak at 6-6.",
+      "Deuce scoring with standard advantage rule; tournament committee reserves right to use sudden-death No-Ad scoring in qualifiers.",
+      "Regulation ITF-approved tennis balls will be supplied for each match.",
+      "Match court schedules and seeded brackets will be announced soon.",
+      ...GENERAL_TOURNAMENT_RULES
     ],
     gallery: [
       {
@@ -448,13 +513,23 @@ export const SPORTS_DATA: Sport[] = [
         notes: "Details will be announced soon."
       }
     ],
-    rules: [
+    sportSpecificRules: [
       "Matches governed by Amateur Kabaddi Federation of India (AKFI) regulations.",
       "Match duration: Two halves of 20 minutes each with a 5-minute break.",
       "Raid clock strictly enforced at 30 seconds; continuous audible cant mandatory.",
       "Bonus line, baulk line, and lobby rules strictly observed by certified referees.",
       "Each team may register up to 12 squad members (7 active on mat, 5 substitutes).",
       "Mat schedule, weigh-in criteria, and fixtures will be announced soon."
+    ],
+    generalRules: GENERAL_TOURNAMENT_RULES,
+    rules: [
+      "Matches governed by Amateur Kabaddi Federation of India (AKFI) regulations.",
+      "Match duration: Two halves of 20 minutes each with a 5-minute break.",
+      "Raid clock strictly enforced at 30 seconds; continuous audible cant mandatory.",
+      "Bonus line, baulk line, and lobby rules strictly observed by certified referees.",
+      "Each team may register up to 12 squad members (7 active on mat, 5 substitutes).",
+      "Mat schedule, weigh-in criteria, and fixtures will be announced soon.",
+      ...GENERAL_TOURNAMENT_RULES
     ],
     gallery: [
       {
@@ -497,13 +572,23 @@ export const SPORTS_DATA: Sport[] = [
         notes: "Details will be announced soon."
       }
     ],
-    rules: [
+    sportSpecificRules: [
       "Follows official Throwball Federation rules for collegiate tournaments.",
       "Matches played as best of 3 sets, 25 points per set (running points).",
       "Ball must be caught with both hands and thrown back with one hand within 3 seconds.",
       "No jumping while throwing the ball; two-handed throws are strictly penalized.",
       "Team roster consists of 7 active court players and up to 5 substitutes.",
       "Tournament fixtures and match timings will be announced soon."
+    ],
+    generalRules: GENERAL_TOURNAMENT_RULES,
+    rules: [
+      "Follows official Throwball Federation rules for collegiate tournaments.",
+      "Matches played as best of 3 sets, 25 points per set (running points).",
+      "Ball must be caught with both hands and thrown back with one hand within 3 seconds.",
+      "No jumping while throwing the ball; two-handed throws are strictly penalized.",
+      "Team roster consists of 7 active court players and up to 5 substitutes.",
+      "Tournament fixtures and match timings will be announced soon.",
+      ...GENERAL_TOURNAMENT_RULES
     ],
     gallery: [
       {
@@ -546,13 +631,23 @@ export const SPORTS_DATA: Sport[] = [
         notes: "Details will be announced soon."
       }
     ],
-    rules: [
+    sportSpecificRules: [
       "FIDE rapid / classical team regulations apply across all boards.",
       "Swiss league tournament format or round-robin depending on total college entries.",
       "Board order must be declared before Round 1 and remain fixed throughout.",
       "Time control: Rapid format with increment per move (e.g. 15 mins + 10s increment).",
       "Touch-move rule strictly enforced; electronic devices strictly forbidden in the tournament hall.",
       "Round schedules, board pairings, and arbiter panel will be announced soon."
+    ],
+    generalRules: GENERAL_TOURNAMENT_RULES,
+    rules: [
+      "FIDE rapid / classical team regulations apply across all boards.",
+      "Swiss league tournament format or round-robin depending on total college entries.",
+      "Board order must be declared before Round 1 and remain fixed throughout.",
+      "Time control: Rapid format with increment per move (e.g. 15 mins + 10s increment).",
+      "Touch-move rule strictly enforced; electronic devices strictly forbidden in the tournament hall.",
+      "Round schedules, board pairings, and arbiter panel will be announced soon.",
+      ...GENERAL_TOURNAMENT_RULES
     ],
     gallery: [
       {

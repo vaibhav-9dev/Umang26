@@ -3,6 +3,8 @@ import { LaurelWreath, GreekColumnIcon, OlympianDivider, GreekMeanderStrip } fro
 import { UmangLogo } from '../components/UmangLogo';
 import { useNavigation } from '../context/NavigationContext';
 import { FinalCTA } from '../components/FinalCTA';
+import { GENERAL_TOURNAMENT_RULES } from '../data/rulesData';
+import { ShieldCheck, Check, AlertCircle } from 'lucide-react';
 import sportsArenaImg from '../assets/images/olympus_athletics_arena_1790530172404.jpg';
 import greekStatueImg from '../assets/images/olympus_greek_statue_1790530183863.jpg';
 
@@ -194,6 +196,59 @@ export const AboutPage: React.FC = () => {
             >
               BROWSE ALL SPORTS & REGISTER
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Official Tournament Rules & Code of Conduct Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24" id="rules">
+        <div className="bg-[#081845] border border-[#F5B81C]/35 p-8 sm:p-14 relative shadow-2xl">
+          {/* Classical Corner Accents */}
+          <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#F5B81C]" />
+          <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#F5B81C]" />
+          <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#F5B81C]" />
+          <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#F5B81C]" />
+
+          <div className="flex items-center gap-2 mb-2">
+            <ShieldCheck className="w-5 h-5 text-[#F5B81C]" />
+            <span className="font-cinzel text-xs font-bold uppercase tracking-[0.25em] text-[#F5B81C]">
+              TOURNAMENT CODE OF OLYMPUS
+            </span>
+          </div>
+
+          <h2 className="font-cinzel text-2xl sm:text-4xl font-extrabold uppercase tracking-[0.14em] text-[#F8F9FA] mb-4">
+            TOURNAMENT RULES FOR EVERY SPORT
+          </h2>
+
+          <p className="font-sans text-xs sm:text-sm text-[#A0ABC4] mb-8 max-w-3xl leading-relaxed">
+            All participating institutions, team captains, and registered athletes across every collegiate sport must strictly abide by the official Umang tournament regulations and conduct guidelines:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-8">
+            {GENERAL_TOURNAMENT_RULES.map((rule, idx) => (
+              <div
+                key={idx}
+                className="p-4 bg-[#040D24] border border-[#F5B81C]/25 hover:border-[#F5B81C]/50 transition-colors flex items-start gap-3.5 text-xs leading-relaxed"
+              >
+                <div className="w-6 h-6 rounded-none border border-[#F5B81C]/70 bg-[#081845] flex items-center justify-center text-[#FFC72C] shrink-0 mt-0.5">
+                  <Check className="w-4 h-4" />
+                </div>
+                <p className="text-[#F8F9FA]/90 font-sans">
+                  {rule}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Institutional Integrity Notice Box */}
+          <div className="p-5 bg-[#040D24] border border-[#F5B81C]/30 flex items-start gap-3.5">
+            <AlertCircle className="w-5 h-5 text-[#F5B81C] shrink-0 mt-0.5" />
+            <div className="text-xs text-[#A0ABC4] leading-relaxed">
+              <strong className="text-[#F8F9FA] block font-cinzel text-[11px] uppercase tracking-wider mb-1">
+                DISPUTE RESOLUTION & DISCRETION
+              </strong>
+              The Sports Committee and the Convener of the Sports Committee (International Institute of Information Technology, Bangalore) reserve the absolute right to interpret rules, decide on disputes, and enforce disciplinary actions. All decisions of the organizing committee are final and binding.
+            </div>
           </div>
         </div>
       </section>
